@@ -2,7 +2,7 @@
 
 **Project**: x_agent_code - Cross-CLI Agent Middleware
 **Started**: 2026-01-06
-**Last Updated**: 2026-01-08 (Research restructured)
+**Last Updated**: 2026-01-08 (L1a deep-dive complete)
 
 ---
 
@@ -25,6 +25,7 @@
 | ID | Topic | Status | Findings | Notes |
 |----|-------|--------|----------|-------|
 | L1 | Existing cross-agent GitHub projects | `COMPLETE` | [L1_github_survey.md](landscape/L1_github_survey.md) | 25+ projects surveyed, niche validated |
+| L1a | Deep-dive: claude-code-mcp & oh-my-opencode | `COMPLETE` | [L1a_deep_dive_key_projects.md](landscape/L1a_deep_dive_key_projects.md) | Patterns adopted, hybrid approach recommended |
 | L2 | MCP/A2A protocols & CLI patterns | `COMPLETE` | [L2_protocols_and_patterns.md](landscape/L2_protocols_and_patterns.md) | MCP foundation, A2A patterns |
 | L3 | CLI agent orchestration tools | `NOT_STARTED` | - | Non-UI orchestration |
 | L4 | Local LLM middleware options | `NOT_STARTED` | - | Localhost routing assistants |
@@ -70,6 +71,7 @@
 | 2026-01-07 | [Architecture Decisions](journal/2026-01-07_architecture-decisions.md) | D1/D2/D3 decisions, feasibility tests, feature brainstorm |
 | 2026-01-08 | [Restructure](journal/2026-01-08_restructure.md) | Split monolith, created journal system |
 | 2026-01-08 | [GitHub Survey](journal/2026-01-08_github-survey.md) | L1 complete - 25+ projects, niche validated |
+| 2026-01-08 | [Deep-Dive Key Projects](journal/2026-01-08_deep-dive.md) | L1a complete - patterns extracted, hybrid approach recommended |
 
 ---
 
@@ -80,6 +82,7 @@
 ### Landscape (`research/landscape/`)
 - [Discovery Findings](landscape/discovery_findings.md) - Overview and synthesis of initial research
 - [L1: GitHub Survey](landscape/L1_github_survey.md) - 25+ projects surveyed, niche validated
+- [L1a: Deep-Dive Key Projects](landscape/L1a_deep_dive_key_projects.md) - claude-code-mcp & oh-my-opencode analysis
 - [L2: Protocols and Patterns](landscape/L2_protocols_and_patterns.md) - MCP, A2A, CLI patterns
 
 ### Codex (`research/codex/`)
@@ -125,6 +128,7 @@
 | 2026-01-08 | Restructure | Split monolithic discovery_findings.md into categorized documents | Journal setup |
 | 2026-01-08 | Journal | Created research/journal/ with backfilled narrative entries | L1 survey |
 | 2026-01-08 | L1 Survey | GitHub landscape survey - 25+ projects, niche validated, key projects identified | Deep-dive phase |
+| 2026-01-08 | L1a Deep-Dive | Analyzed claude-code-mcp and oh-my-opencode in detail, documented patterns to adopt | Implementation phase |
 
 ---
 
