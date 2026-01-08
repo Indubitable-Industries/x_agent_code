@@ -128,7 +128,9 @@ The server exposes **one tool**: `claude_code`
 ## Project 2: oh-my-opencode-CLI
 
 **Repository**: https://github.com/Kevinjulu/oh-my-opencode-CLI
-**License**: Open Source
+**License**: Sustainable Use License (NOT permissive open source)
+
+> ⚠️ **License Warning**: This project uses a restrictive "Sustainable Use License" that limits commercial use and distribution. We document general *concepts* here (which are not copyrightable), not specific implementations. For our middleware, we rely on MIT-licensed projects (claude-code-mcp, OpenCode core) for implementation patterns.
 
 ### What It Does
 
@@ -284,7 +286,7 @@ bunx oh-my-opencode install \
 
 ## Patterns to Adopt
 
-### From claude-code-mcp
+### From claude-code-mcp (MIT License ✅)
 
 1. **One-shot execution with permission bypass**
    ```bash
@@ -300,57 +302,59 @@ bunx oh-my-opencode install \
    - Keep it simple: one `ask_agent()` tool
    - Let the invoked agent handle complexity
 
-### From oh-my-opencode
+### General Software Concepts (Not copyrightable)
 
-1. **Async subagent pattern**
-   - Spawn, don't wait
-   - Collect results later
-   - Merge context intelligently
+These are industry-standard patterns, not specific implementations:
 
-2. **Hooks for observability**
-   - PreToolUse / PostToolUse for logging
-   - UserPromptSubmit for request tracking
+1. **Async subprocess execution**
+   - Spawn process, don't block
+   - Collect results via stdout/file
+   - Standard Unix pattern
 
-3. **Enforcement mechanisms**
-   - Todo continuation: don't let agents quit early
-   - Quality checks: validate output before accepting
+2. **Lifecycle hooks**
+   - Pre/post execution callbacks
+   - Standard middleware pattern (Express.js, Django, etc.)
 
-4. **Model-task matching**
-   - Different models for different tasks
-   - Specialized agents for specialized work
+3. **Task completion enforcement**
+   - Validate work before marking done
+   - Standard quality gate pattern
+
+4. **Model routing by task type**
+   - Different tools for different jobs
+   - Standard orchestration pattern
 
 ---
 
 ## Strategic Recommendations
 
-### Option A: Build on Existing
+### Option A: Build on Existing ❌
 
 **Use oh-my-opencode as our OpenCode spoke**:
-- Already has Claude compatibility
-- Multi-model support
-- Active community
-- Reduces our build effort
+- ~~Already has Claude compatibility~~
+- ~~Multi-model support~~
 
-**Risk**: Dependency on external project, may not fit our exact needs.
+**Rejected**: Sustainable Use License prohibits commercial distribution. Not viable.
 
 ### Option B: Learn and Build
 
-**Build our own middleware, informed by these patterns**:
+**Build our own middleware using MIT-licensed foundations**:
+- claude-code-mcp (MIT) - proven patterns for Claude invocation
+- OpenCode core (MIT) - direct HTTP API integration
 - Full control over architecture
 - Tailored to our interaction modes
-- Can contribute patterns back to community
 
-**Risk**: More development effort, reinventing some wheels.
+**Risk**: More development effort, but legally clean.
 
-### Option C: Hybrid
+### Option C: Hybrid (Recommended) ✅
 
-**Use claude-code-mcp patterns for hub, build custom spoke integration**:
-- Adopt permission bypass pattern
-- Adopt one-shot execution pattern
-- Build our own interaction mode layer
-- Use OpenCode directly (not oh-my-opencode)
+**Use MIT-licensed claude-code-mcp patterns, build on MIT-licensed OpenCode core**:
+- Adopt permission bypass pattern from claude-code-mcp (MIT)
+- Adopt one-shot execution pattern from claude-code-mcp (MIT)
+- Use OpenCode HTTP API directly (MIT)
+- Build our own interaction mode layer (novel)
+- General concepts (async execution, hooks) are not copyrightable
 
-**Recommendation**: **Option C** - We want our unique interaction modes (challenge/agree/collaborate/deduce) which neither project provides. Use their patterns, not their code.
+**Recommendation**: **Option C** - Build on MIT-licensed foundations only. General software concepts from oh-my-opencode (async subagents, hooks patterns) inform our design, but implementation derives from MIT sources and original work.
 
 ---
 
