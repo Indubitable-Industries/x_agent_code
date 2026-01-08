@@ -58,6 +58,7 @@
 | F4 | Context size limits | `NOT_STARTED` | - | How much can we share? |
 | F5 | Multi-model support | `COMPLETE` | PASSED | GPT-5, Grok-4-fast confirmed |
 | F6 | HTTP API per-request model | `COMPLETE` | PASSED | Single serve, multi-model via API |
+| F7 | OpenCode CLI invocation from Claude | `COMPLETE` | [F7_invocation_tests.md](opencode/F7_invocation_tests.md) | `opencode run` works, model selection works |
 
 ---
 
@@ -90,6 +91,7 @@
 
 ### OpenCode (`research/opencode/`)
 - [P2: Capabilities](opencode/P2_capabilities.md) - HTTP API, modes, feasibility tests
+- [F7: Invocation Tests](opencode/F7_invocation_tests.md) - CLI invocation from Claude Code validated
 
 ### Architecture (`research/architecture/`)
 - [A1: MCP Middleware](architecture/A1_mcp_middleware.md) - Hub-spoke design, capability proxying
@@ -129,6 +131,7 @@
 | 2026-01-08 | Journal | Created research/journal/ with backfilled narrative entries | L1 survey |
 | 2026-01-08 | L1 Survey | GitHub landscape survey - 25+ projects, niche validated, key projects identified | Deep-dive phase |
 | 2026-01-08 | L1a Deep-Dive | Analyzed claude-code-mcp and oh-my-opencode in detail, documented patterns to adopt | Implementation phase |
+| 2026-01-08 | F7 Testing | Validated `opencode run` CLI invocation with multiple models (GPT-5, Grok) | Ready to build |
 
 ---
 
