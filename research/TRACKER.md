@@ -100,6 +100,7 @@
 
 ### Feature Ideas (`research/features/`)
 - [F1: Newsreel Memory](features/F1_newsreel_memory.md) - Grok-4-fast powered activity narrative
+- [F2: Peer Agent Messaging](features/F2_peer_agent_messaging.md) - Live P2P communication between concurrent agent sessions
 
 ---
 
@@ -113,6 +114,7 @@
 | D2 | Architecture | Hub-spoke vs peer-to-peer | Hub-spoke | 2026-01-07 |
 | D3 | GPT-5 harness | Codex vs OpenCode | OpenCode | 2026-01-07 |
 | D4 | Vibe scope | Initial scope vs deferred | DEFERRED | 2026-01-07 |
+| D5 | P2P messaging | Add peer messaging to hub-spoke? | YES - F2 proposed | 2026-01-08 |
 
 ---
 
