@@ -169,7 +169,7 @@ Create output file immediately when starting task:
 ## Raw Results - GitHub
 
 ### Search: "[query]"
-- [repo/name](url) - description
+- [repo/name](url) - description - **License**: [MIT/Apache/etc]
 ...
 
 ---
@@ -286,7 +286,59 @@ SEARCH:   Tavily (3 parallel) | Context7 (3 parallel) | GitHub (via Tavily)
 SYNTH:    12 thoughts per source → 18 thoughts cross-source → Conclusions
 
 STOP:     Phase complete | Blocked | Conflict | Decision needed | Every 3 tasks
+
+LICENSE:  MIT/Apache/BSD ✅ | LGPL/MPL ⚠️ | GPL/AGPL 🔍 | Proprietary ❌
+          Always note license in project evaluations. Concepts ≠ code.
 ```
+
+---
+
+## Licensing Considerations
+
+**Always check licenses when evaluating projects.**
+
+### License Tiers
+
+| Tier | Licenses | What We Can Do |
+|------|----------|----------------|
+| ✅ **Preferred** | MIT, Apache 2.0, BSD | Use code, adopt patterns, fork freely |
+| ⚠️ **Caution** | LGPL, MPL | Can use as dependency, check linking rules |
+| 🔍 **Inspect** | GPL, AGPL | Copyleft implications - consult before using |
+| ❌ **Avoid Code** | Proprietary, "Sustainable Use", Commercial | Can be *inspired by concepts*, cannot copy code |
+
+### During Research
+
+When documenting a project, always note:
+1. **License type** in project header
+2. **Usage implications** for our project
+3. **What we're taking** (code patterns vs general concepts)
+
+### The Inspiration Rule
+
+General software concepts are **not copyrightable**:
+- Async subprocess execution (standard Unix pattern)
+- Lifecycle hooks (standard middleware pattern)
+- Task completion enforcement (standard QA pattern)
+- Model routing by task type (standard orchestration pattern)
+
+You can be inspired by *how* a project solves a problem even if you can't use their code. Document the concept, implement it yourself using MIT-licensed references or original work.
+
+### Our Stack Licenses
+
+| Component | License | Role |
+|-----------|---------|------|
+| OpenCode core | MIT | HTTP API backend for GPT-5/Grok |
+| claude-code-mcp | MIT | Pattern reference for Claude invocation |
+| x_agent_code | MIT (ours) | Middleware layer |
+
+### Red Flags
+
+Stop and verify if you see:
+- "Sustainable Use License"
+- "Source Available" (not same as Open Source)
+- "Non-commercial use only"
+- "Enterprise license required"
+- No LICENSE file in repository
 
 ---
 

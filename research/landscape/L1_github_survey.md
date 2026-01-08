@@ -234,16 +234,17 @@ What x_agent_code offers that doesn't exist:
 
 ## Project Evaluations
 
-| Project | Relevance | Maturity | Architecture | Learn/Use/Compete |
-|---------|-----------|----------|--------------|-------------------|
-| steipete/claude-code-mcp | HIGH | Active | One-shot MCP server | **STUDY** - potential base for hub |
-| oh-my-opencode-CLI | HIGH | Active/Community | Claude compat layer | **STUDY** - potential spoke solution |
-| lastmile-ai/mcp-agent | MEDIUM | Active | Workflow patterns | LEARN patterns |
-| ruvnet/claude-flow | MEDIUM | Active/v2.7 | Enterprise swarms | LEARN patterns |
-| langroid/langroid | MEDIUM | Mature | Message exchange | LEARN architecture |
-| crewAIInc/crewAI | LOW | Enterprise/100k+ | Role-based agents | AWARENESS only |
-| microsoft/agent-framework | LOW | Enterprise | Graph workflows | AWARENESS only |
-| block/goose | LOW | Active | Multi-model config | AWARENESS only |
+| Project | License | Relevance | Action |
+|---------|---------|-----------|--------|
+| steipete/claude-code-mcp | MIT ✅ | HIGH | **USE** - adopt patterns for hub |
+| opencode-ai/opencode | MIT ✅ | HIGH | **USE** - HTTP API for spoke |
+| oh-my-opencode-CLI | Sustainable Use ❌ | HIGH | **INSPIRED BY** - concepts only |
+| lastmile-ai/mcp-agent | MIT ✅ | MEDIUM | LEARN patterns |
+| ruvnet/claude-flow | MIT ✅ | MEDIUM | LEARN patterns |
+| langroid/langroid | MIT ✅ | MEDIUM | LEARN architecture |
+| crewAIInc/crewAI | MIT ✅ | LOW | AWARENESS only |
+| microsoft/agent-framework | MIT ✅ | LOW | AWARENESS only |
+| block/goose | Apache 2.0 ✅ | LOW | AWARENESS only |
 
 ---
 
@@ -251,21 +252,19 @@ What x_agent_code offers that doesn't exist:
 
 ### Immediate (Before Implementation)
 
-1. **Deep-dive on claude-code-mcp**
-   - Clone and study one-shot pattern
-   - Understand permission bypass mechanism
-   - Evaluate: use directly vs learn from?
+1. **Deep-dive on claude-code-mcp** (MIT ✅) - DONE in L1a
+   - One-shot pattern, permission bypass, CWD injection
+   - Patterns adopted for our hub design
 
-2. **Deep-dive on oh-my-opencode**
-   - What's in the Claude Code compatibility layer?
-   - Async subagent implementation details
-   - Evaluate: integrate vs build own?
+2. **Deep-dive on oh-my-opencode** (Sustainable Use ❌) - DONE in L1a
+   - Documented general concepts (async, hooks, enforcement)
+   - Cannot use code, only inspired by architectural ideas
 
-3. **Document patterns to adopt**
-   - Create patterns reference doc
-   - Decide which patterns to implement
+3. **Use OpenCode core directly** (MIT ✅)
+   - HTTP API at `opencode serve --port 3001`
+   - No dependency on oh-my-opencode plugin
 
-### Then (Implementation Phase)
+### Implementation Phase
 
-4. Build middleware with informed decisions
-5. Consider contributing back to ecosystem
+4. Build middleware using MIT-licensed foundations only
+5. Implement our unique interaction modes (novel contribution)
