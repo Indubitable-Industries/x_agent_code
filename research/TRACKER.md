@@ -24,7 +24,7 @@
 
 | ID | Topic | Status | Findings | Notes |
 |----|-------|--------|----------|-------|
-| L1 | Existing cross-agent GitHub projects | `NOT_STARTED` | - | Survey for prior art |
+| L1 | Existing cross-agent GitHub projects | `COMPLETE` | [L1_github_survey.md](landscape/L1_github_survey.md) | 25+ projects surveyed, niche validated |
 | L2 | MCP/A2A protocols & CLI patterns | `COMPLETE` | [L2_protocols_and_patterns.md](landscape/L2_protocols_and_patterns.md) | MCP foundation, A2A patterns |
 | L3 | CLI agent orchestration tools | `NOT_STARTED` | - | Non-UI orchestration |
 | L4 | Local LLM middleware options | `NOT_STARTED` | - | Localhost routing assistants |
@@ -69,6 +69,7 @@
 | 2026-01-06 | [Initial Discovery](journal/2026-01-06_initial-discovery.md) | Tavily searches, Codex sandbox problem, OpenCode alternative discovered |
 | 2026-01-07 | [Architecture Decisions](journal/2026-01-07_architecture-decisions.md) | D1/D2/D3 decisions, feasibility tests, feature brainstorm |
 | 2026-01-08 | [Restructure](journal/2026-01-08_restructure.md) | Split monolith, created journal system |
+| 2026-01-08 | [GitHub Survey](journal/2026-01-08_github-survey.md) | L1 complete - 25+ projects, niche validated |
 
 ---
 
@@ -78,6 +79,7 @@
 
 ### Landscape (`research/landscape/`)
 - [Discovery Findings](landscape/discovery_findings.md) - Overview and synthesis of initial research
+- [L1: GitHub Survey](landscape/L1_github_survey.md) - 25+ projects surveyed, niche validated
 - [L2: Protocols and Patterns](landscape/L2_protocols_and_patterns.md) - MCP, A2A, CLI patterns
 
 ### Codex (`research/codex/`)
@@ -121,7 +123,8 @@
 | 2026-01-07 | Feasibility | F1, F3, F5, F6 passed - subprocess spawn, multi-model, HTTP API confirmed | Build middleware |
 | 2026-01-07 | Feature Design | Feature brainstorm with user decisions, LLM Context Arena modes reviewed | Resolve open questions |
 | 2026-01-08 | Restructure | Split monolithic discovery_findings.md into categorized documents | Journal setup |
-| 2026-01-08 | Journal | Created research/journal/ with backfilled narrative entries | Implementation phase |
+| 2026-01-08 | Journal | Created research/journal/ with backfilled narrative entries | L1 survey |
+| 2026-01-08 | L1 Survey | GitHub landscape survey - 25+ projects, niche validated, key projects identified | Deep-dive phase |
 
 ---
 
